@@ -25,7 +25,21 @@ const Gallery: React.FunctionComponent<IGalleryProps> = ({ photos, status }) => 
 
   console.log("Photos", photos)
 
-  return <div>Gallery</div>;
+  if (status === 'pending') return <span>Loading...</span>;
+
+  return (
+    <div>
+      <h2>Gallery</h2>
+      {photos.map((photo: IPhoto, idx: number) => {
+        return (
+          <div key={idx}>
+            <h3>{photo.title}</h3>
+            <p>{photo.url}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 export default connector(Gallery);
