@@ -1,12 +1,12 @@
 import Dexie, { Table } from 'dexie';
 
 // Models
-import { Photo } from './models/Photo';
+import { IPhoto } from './models/Photo';
 
 export class MySubClassedDexie extends Dexie {
   // 'friends' is added by dexie when declaring the stores()
   // We just tell the typing system this is the case
-  photos!: Table<Photo>; 
+  photos!: Table<IPhoto>; 
 
   constructor() {
     super('myDatabase');
