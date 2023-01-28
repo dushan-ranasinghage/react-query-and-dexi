@@ -28,15 +28,15 @@ const Gallery: React.FunctionComponent<IGalleryProps> = ({ photos, status }) => 
   return (
     <div>
       <h2>Gallery</h2>
-      {photos.map((photo: IPhoto, idx: number) => {
-        return (
-          <div key={idx}>
-            {/* <img src={photo.url} alt={photo.title} /> */}
-            <h3>{photo.title}</h3>
-            <p>{photo.url}</p>
-          </div>
-        );
-      })}
+        {photos.map((photo: IPhoto, idx: number) => {
+          return (
+            <div key={idx}>
+              <img src={photo.url} alt={photo.title} height={100} width={100}/>
+              <h3>{photo.title}</h3>
+              <p>{photo.url}</p>
+            </div>
+          );
+        })}
     </div>
   );
 };

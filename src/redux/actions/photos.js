@@ -26,7 +26,7 @@ export const getPhotos = createAsyncThunk(
             const count = await db.photos.count();
             if (count === 0) {
                 const results = await axios.get('https://jsonplaceholder.typicode.com/photos');
-                const test = await db.photos.bulkPut(results.data);
+                await db.photos.bulkPut(results.data);
                 const end = Date.now();
                 console.log(`Execution time (Axios): ${end - start} ms`);
                 return results.data;

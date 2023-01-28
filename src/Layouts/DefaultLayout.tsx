@@ -18,6 +18,12 @@ const DefaultLayout: React.FunctionComponent<IDefaultLayoutProps> = (props) => {
                         <Link to="/gallery">Gallery</Link>
                     </li>
                     <li>
+                        <Link to="/hooks-gallery">Hooks Gallery</Link>
+                    </li>
+                    <li>
+                        <Link to="/memo-comments">Memo Comments</Link>
+                    </li>
+                    <li>
                         <Link to="/nothing-here">Nothing Here</Link>
                     </li>
                 </ul>
