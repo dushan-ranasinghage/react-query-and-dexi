@@ -23,8 +23,6 @@ const Gallery: React.FunctionComponent<IGalleryProps> = ({ photos, status }) => 
     store.dispatch(getPhotos())
   }, [])
 
-  console.log("Photos", photos)
-
   if (status === 'pending') return <span>Loading...</span>;
 
   return (
@@ -33,6 +31,7 @@ const Gallery: React.FunctionComponent<IGalleryProps> = ({ photos, status }) => 
       {photos.map((photo: IPhoto, idx: number) => {
         return (
           <div key={idx}>
+            {/* <img src={photo.url} alt={photo.title} /> */}
             <h3>{photo.title}</h3>
             <p>{photo.url}</p>
           </div>

@@ -4,7 +4,7 @@ import Dexie, { Table } from 'dexie';
 import { IPhoto } from './models/Photo';
 
 export class MySubClassedDexie extends Dexie {
-  // 'friends' is added by dexie when declaring the stores()
+  // 'photos' is added by dexie when declaring the stores()
   // We just tell the typing system this is the case
   photos!: Table<IPhoto>;
 
@@ -15,5 +15,7 @@ export class MySubClassedDexie extends Dexie {
     });
   }
 }
+
+
 
 export const db = new MySubClassedDexie();
