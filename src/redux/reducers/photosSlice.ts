@@ -2,9 +2,15 @@ import { createSlice, current } from '@reduxjs/toolkit'
 
 import { getPhotos } from '../actions/photos'
 
-const INITIAL_STATE = {
+interface IInitialState {
+  items: any
+  status: string
+}
+
+// status: 'idle' | 'pending' | 'succeeded' | 'failed'
+const INITIAL_STATE: IInitialState = {
   items: [],
-  status: 'idle' | 'pending' | 'succeeded' | 'failed'
+  status: 'idle'
 }
 
 export const counterSlice = createSlice({

@@ -24,6 +24,9 @@ const DefaultLayout: React.FunctionComponent<IDefaultLayoutProps> = (props) => {
                         <Link to="/memo-comments">Memo Comments</Link>
                     </li>
                     <li>
+                        <Link to="/localforage">Localforage</Link>
+                    </li>
+                    <li>
                         <Link to="/nothing-here">Nothing Here</Link>
                     </li>
                 </ul>

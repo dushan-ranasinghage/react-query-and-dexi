@@ -31,7 +31,7 @@ const Gallery: React.FunctionComponent<IGalleryProps> = ({ photos, status }) => 
         {photos.map((photo: IPhoto, idx: number) => {
           return (
             <div key={idx}>
-              <img src={photo.url} alt={photo.title} height={100} width={100}/>
+              <img src={photo.url} alt={photo.title} height={100} width={100} />
               <h3>{photo.title}</h3>
               <p>{photo.url}</p>
             </div>
